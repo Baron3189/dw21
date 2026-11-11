@@ -39,9 +39,9 @@ pub fn miles_per_day(pace: Pace, weather: Weather) -> u32 {
         Pace::Steady => 12,
         Pace::Grueling => 16,
     };
-    match weather {
-        _ => base,
+    match weather {	
         Weather::Snow => base / 2,
         Weather::Rain => base - 2,
+        _ => base,
     }
 }
